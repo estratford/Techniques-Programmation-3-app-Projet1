@@ -1,0 +1,37 @@
+<!-- Puisque nous avons déclarer les forfaits dans le forfait-item.component.ts, 
+    celui-ci peut retrouver les props que nous avons mis dans le mock -->
+<div class="wrapper">
+<mat-card [ngClass]="{'forfaitList': true,
+                        'forfaitList-vedette': forfait.vedette === true}">
+    <mat-card-header>
+        <div class="forfait">
+            <mat-card-title>
+                {{forfait.hotel.nom}}
+                <app-star [nombreEtoiles]="forfait.hotel.nombreEtoiles"></app-star>
+            </mat-card-title>
+            <mat-card-subtitle>{{forfait.destination}}</mat-card-subtitle>
+            <div class="subtitle-infos">
+                <span class="rabaisAppliquer" *ngIf="forfait.rabais > 0">{{forfait.prix - forfait.rabais}}$</span>
+                <span [ngClass]="{'rabaisPrix': true,
+                                    'rabaisPrixBarrer': forfait.rabais > 0}">{{forfait.prix}}$</span>
+                <span class="displayRabais" *ngIf="forfait.rabais > 0">Rabais de {{forfait.rabais}}$</span>
+            </div>
+            <div class="date-infos">
+                <p>Ville de départ: {{forfait.villeDepart}}</p>
+                <p>{{forfait.dateDepart}} - {{forfait.dateRetour}}</p>
+            </div>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <p class="descriptionEndroit">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Eos reiciendis hic nesciunt, dolorum blanditiis amet ex eaque consequuntur minus temporibus laborum impedit vitae vel, 
+            officia ea nihil, in voluptates mollitia. Maxime optio fugiat cumque culpa sit eaque, in quisquam nobis 
+            voluptas quo officia? Vel atque dignissimos, reiciendis velit ipsam facilis fugiat, cum adipisci labore repellat necessitatibus tempore possimus amet unde!
+            <span class="nbChambres">Nombre de chambres: {{forfait.hotel.nombreChambres}}</span></p>
+            <p class="activite">Activités et caractéristiques:</p>
+            <ul>
+                <li>{{forfait.hotel.caracteristiques}}</li>
+            </ul>
+    </mat-card-content>
+</mat-card>
+</div>
