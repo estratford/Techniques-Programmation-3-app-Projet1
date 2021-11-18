@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StarComponent } from './components/star/star.component';
+import { BoutonCtaComponent } from './components/bouton-cta/bouton-cta.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { StarComponent } from './components/star/star.component';
     MiniForfaitsComponent,
     MiniForfaitItemComponent,
     StarComponent,
+    BoutonCtaComponent,
 
 
   ],

@@ -18,7 +18,7 @@
             </div>
             <div class="date-infos">
                 <p>Ville de départ: {{forfait.villeDepart}}</p>
-                <p>{{forfait.dateDepart}} - {{forfait.dateRetour}}</p>
+                <p class="depart-forfait">À partir du {{forfait.dateDepart}} jusqu'au {{forfait.dateRetour}}</p>
             </div>
         </div>
     </mat-card-header>
@@ -30,8 +30,9 @@
             <span class="nbChambres">Nombre de chambres: {{forfait.hotel.nombreChambres}}</span></p>
             <p class="activite">Activités et caractéristiques:</p>
             <ul>
-                <li>{{forfait.hotel.caracteristiques}}</li>
+                <li>{{forfait.hotel.caracteristiques}} test</li>
             </ul>
+            <app-bouton-cta></app-bouton-cta>
     </mat-card-content>
 </mat-card>
 </div>
